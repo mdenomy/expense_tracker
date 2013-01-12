@@ -8,9 +8,11 @@ The application is developed in an iterative and incremental manner.  The GIT re
 
 ** NOTE: I am not advocating commiting changes with failing tests as part of your normal development practices.  I did it for this repository to be able to swithc to different parts of the Red-Green-Refactor cycle quickly in the course of a presentation **
 
+I intentionally avoid using the Rails scaffolding generator, although I do use the individual generators for model, controller, and database migrations.
+
 #Iterations
 ##Iteration 0
-Set up a bare bones rails project to use rspec.  Rspec is configured to display colors and provide the documentation output.
+Set up a bare bones Rails project to use rspec.  Rspec is configured to display colors and provide the documentation output.
 
 The database is postgres, but that can be changed if needed.
 ###Branches
@@ -19,6 +21,11 @@ None
 ##Iteration 1
 Create a model for Expenses.  Each expense has an amount and a description.
 
+Put basic validations on the the Expense model:
+
+* Amounts must be greater than zero
+* Must have a description
+
 ###Branches
 * 1-1-failing-validations
 * 1-2-passing-validations
@@ -26,7 +33,11 @@ Create a model for Expenses.  Each expense has an amount and a description.
 * 1-4-factory-girl
 
 ##Iteration 2
-Show all descriptions.  Implement the index action for the ExpensesController and have a simple view that shows all the expenses
+Show all expenses.  
+
+Implement the index action for the ExpensesController and have a simple view that shows all the expenses in a table.
+
+Added some seed data and absolutely minimal styling to keep it simple.
 
 ###Branches
   * 2-1-failing-index-route
