@@ -10,7 +10,7 @@ describe ExpensesController do
 
     it "assigns expenses" do
       get 'index'
-      @expenses.should_not be_nil
+      assigns(:expenses).should_not be_nil
     end
   end
 end
