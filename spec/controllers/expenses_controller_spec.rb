@@ -7,5 +7,10 @@ describe ExpensesController do
       get 'index'
       response.should be_success
     end
+
+    it "assigns expenses" do
+      get 'index'
+      @expenses.should_not be_nil
+    end
   end
 end
