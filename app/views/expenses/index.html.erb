@@ -1,2 +1,15 @@
+<table>
+  <tr class="expense_header">
+    <th>Amount</th>
+    <th>Description</th>
+  </tr>
 
+  <% @expenses.each do |expense| %>
+      <tr class="expense">
+        <td><%= expense.amount %></td>
+        <td><%= expense.description %></td>
+      </tr>
+  <% end %>
+
+</table>
 
