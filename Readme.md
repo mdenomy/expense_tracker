@@ -35,4 +35,6 @@ Show all descriptions.  Implement the index action for the ExpensesController an
   * 2-4-passing-index
   * 2-5-failing-view
   * 2-6-passing-view
+  * 2-7-refactor-view
+  * 2-8-seed-data-and-min-styling
 
