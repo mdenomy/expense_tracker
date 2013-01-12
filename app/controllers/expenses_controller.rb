@@ -5,6 +5,5 @@ class ExpensesController < ApplicationController
   end
 
   def new
-
   end
 end

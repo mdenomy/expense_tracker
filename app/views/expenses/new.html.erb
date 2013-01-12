@@ -1,0 +1,6 @@
+<%= form_for(@expense) do |f| %>
+    <%= f.label :amount %>
+      <%= f.number_field :amount %>
+    <%= f.label :name %>
+      <%= f.text_field :description %>
+<% end %>
