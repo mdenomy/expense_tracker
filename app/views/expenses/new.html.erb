@@ -1,4 +1,6 @@
-<%= form_for(@expense) do |f| %>
+<h1>Add New Expense</h1>
+
+  <%= form_for(@expense) do |f| %>
     <%= f.label :amount %>
     <%= f.number_field :amount %>
     <%= f.label :description %>
