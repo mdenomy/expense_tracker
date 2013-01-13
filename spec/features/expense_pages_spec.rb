@@ -23,5 +23,15 @@ describe "Expense Pages" do
       visit new_expense_path
       page.should have_selector('form')
     end
+
+    it "can enter a new expense" do
+      visit new_expense_path
+      fill_in "Amount", with: 44.99
+      fill_in "Description", with: "Bulleit Bourbon"
+      click_button "Add Expense"
+      page.should have_selector('h1', text: 'Expense List')
+      page.should have_content('44.99')
+      page.should have_content('Bulleit Bourbon')
+    end
   end
 end
