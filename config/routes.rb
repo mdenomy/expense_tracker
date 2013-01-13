@@ -1,5 +1,7 @@
 ExpenseTracker::Application.routes.draw do
 
+  root to: 'expenses#index'
+
   resources :expenses, only: [:index, :new]
 
   # The priority is based upon order of creation:

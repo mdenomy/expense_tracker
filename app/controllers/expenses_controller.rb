@@ -5,5 +5,6 @@ class ExpensesController < ApplicationController
   end
 
   def new
+    @expense = Expense.new
   end
 end
