@@ -15,7 +15,6 @@ describe ExpensesController do
   end
 
   describe "GET 'new'" do
-
     it "returns success" do
       get 'new'
       response.should be_success
