@@ -48,6 +48,14 @@ describe "Expense Pages" do
         fill_in "Amount", with: -100.0
         expect { click_button "Add Expense" }.not_to change(Expense, :count)
       end
+
+      it "stays on the new page" do
+        visit new_expense_path
+        fill_in "Amount", with: -100.0
+        click_button "Add Expense"
+        fill_in "Amount", with: 110.0
+        fill_in "Description", with: "T Pass"
+      end
     end
   end
 end
