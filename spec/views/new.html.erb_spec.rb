@@ -8,6 +8,7 @@ describe "expenses/new" do
     assert_select "form", :action => expenses_path, :method => "post" do
       assert_select "input#expense_amount", :name => "expense[amount]"
       assert_select "input#expense_description", :name => "expense[description]"
+      assert_select "input[type=submit]"
     end
   end
 
