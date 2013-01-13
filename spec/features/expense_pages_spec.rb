@@ -23,5 +23,14 @@ describe "Expense Pages" do
       visit new_expense_path
       page.should have_selector('form')
     end
+
+    it "can create a new expense" do
+      visit new_expense_path
+      fill_in "Amount", with: 54.99
+      fill_in "Description", with: "Bulleit Bourbon"
+      expect { click_button "Add Expense" }.to change(Expense, :count).by(1)
+      page.should have_content('54.99')
+      page.should have_content('Bulleit Bourbon')
+    end
   end
 end
