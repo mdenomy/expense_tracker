@@ -9,8 +9,8 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    expense = Expense.new(params[:expense])
-    if expense.save
+    @expense = Expense.new(params[:expense])
+    if @expense.save
       redirect_to expenses_path
     else
       render 'new'
