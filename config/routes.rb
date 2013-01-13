@@ -2,7 +2,7 @@ ExpenseTracker::Application.routes.draw do
 
   root to: 'expenses#index'
 
-  resources :expenses, only: [:index, :new]
+  resources :expenses, only: [:index, :new, :create]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
