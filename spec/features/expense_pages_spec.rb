@@ -24,20 +24,23 @@ describe "Expense Pages" do
       page.should have_selector('form')
     end
 
-    it "can create a new expense" do
-      visit new_expense_path
-      fill_in "Amount", with: 54.99
-      fill_in "Description", with: "Bulleit Bourbon"
-      expect { click_button "Add Expense" }.to change(Expense, :count).by(1)
-    end
+    describe "creating expense with valid data" do
 
-    it "New expense is in the expenses list" do
-      visit new_expense_path
-      fill_in "Amount", with: 54.99
-      fill_in "Description", with: "Bulleit Bourbon"
-      click_button "Add Expense"
-      page.should have_content('54.99')
-      page.should have_content('Bulleit Bourbon')
+      before do
+        visit new_expense_path
+        fill_in "Amount", with: 54.99
+        fill_in "Description", with: "Bulleit Bourbon"
+      end
+
+      it "can create a new expense" do
+        expect { click_button "Add Expense" }.to change(Expense, :count).by(1)
+      end
+
+      it "new expense is in the expenses list" do
+        click_button "Add Expense"
+        page.should have_content('54.99')
+        page.should have_content('Bulleit Bourbon')
+      end
     end
   end
 end
