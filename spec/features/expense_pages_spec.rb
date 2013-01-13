@@ -25,7 +25,6 @@ describe "Expense Pages" do
     end
 
     describe "creating expense with valid data" do
-
       before do
         visit new_expense_path
         fill_in "Amount", with: 54.99
@@ -40,6 +39,14 @@ describe "Expense Pages" do
         click_button "Add Expense"
         page.should have_content('54.99')
         page.should have_content('Bulleit Bourbon')
+      end
+    end
+
+    describe "creating expense with invalid data" do
+      it "does not create a new expense" do
+        visit new_expense_path
+        fill_in "Amount", with: -100.0
+        expect { click_button "Add Expense" }.not_to change(Expense, :count)
       end
     end
   end
