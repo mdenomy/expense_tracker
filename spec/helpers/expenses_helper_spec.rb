@@ -23,4 +23,8 @@ describe ExpensesHelper do
     string_to_dollars("1.2").should eq 1.2
     string_to_dollars("1").should eq 1
   end
+
+  it "parses negative numbers" do
+    string_to_dollars("-1.23").should eq -1.23
+  end
 end
