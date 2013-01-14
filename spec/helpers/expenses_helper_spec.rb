@@ -13,4 +13,9 @@ describe ExpensesHelper do
   it "parses a value that contains commas" do
     string_to_dollars("10,000.00").should eq 10000.00
   end
+
+  it "truncates a value with more than 2 decimal places" do
+    string_to_dollars("1.231").should eq 1.23
+    string_to_dollars("1.239").should eq 1.23
+  end
 end
