@@ -18,4 +18,9 @@ describe ExpensesHelper do
     string_to_dollars("1.231").should eq 1.23
     string_to_dollars("1.239").should eq 1.23
   end
+
+  it "parses numbers with less than 2 decimal places" do
+    string_to_dollars("1.2").should eq 1.2
+    string_to_dollars("1").should eq 1
+  end
 end
