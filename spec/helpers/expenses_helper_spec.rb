@@ -10,4 +10,7 @@ describe ExpensesHelper do
     string_to_dollars("$2.34").should eq 2.34
   end
 
+  it "parses a value that contains commas" do
+    string_to_dollars("10,000.00").should eq 10000.00
+  end
 end
