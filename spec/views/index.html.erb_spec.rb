@@ -19,9 +19,14 @@ describe "expenses/index" do
   it "expense has the amount and description" do
     assign(:expenses, [ stub_model(Expense, amount: 1.25, description: "Snickers bar")])
     render
-    expect(rendered).to include("1.25")
+    expect(rendered).to include("$1.25")
     expect(rendered).to include("Snickers bar")
   end
 
-end
+  it "pads the amount to 2 decimal places" do
+     assign(:expenses, [ stub_model(Expense, amount: 1, description: "Gum")])
+     render
+     expect(rendered).to include("$1.00")
+   end
+ end
 
