@@ -1,4 +1,5 @@
 require 'spec_helper'
+include ExpensesHelper
 
 describe ExpensesController do
 
@@ -20,4 +21,19 @@ describe ExpensesController do
       response.should be_success
     end
   end
+
+  describe "POST 'create'" do
+    it "should strip dollar signs from amount" do
+      expect {
+         post :create, expense: {amount: "$12.34", description: "Howdy"}
+       }.to change(Expense, :count).by(1)
+    end
+
+    it "should strip commas from amount" do
+      expect {
+         post :create, expense: {amount: "1,000.34", description: "Howdy"}
+       }.to change(Expense, :count).by(1)
+    end
+  end
 end
+

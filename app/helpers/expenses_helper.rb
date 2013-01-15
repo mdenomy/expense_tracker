@@ -1,7 +1,7 @@
 module ExpensesHelper
 
-  def string_to_dollars(input)
-    input.gsub!(/[^\d.-]/,'')
-    BigDecimal(input).truncate(2)
+  def string_to_dollars(value)
+    value.gsub!(/[^\d.-]/,'')
+    BigDecimal(value).truncate(2)
   end
 end

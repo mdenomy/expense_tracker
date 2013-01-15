@@ -30,7 +30,7 @@ describe "Expense Pages" do
     describe "creating expense with valid data" do
       before do
         visit new_expense_path
-        fill_in "Amount", with: 54.99
+        fill_in "Amount", with: "54.99"
         fill_in "Description", with: "Bulleit Bourbon"
       end
 
@@ -49,7 +49,7 @@ describe "Expense Pages" do
     describe "creating expense with invalid data" do
       before do
         visit new_expense_path
-        fill_in "Amount", with: -100.0
+        fill_in "Amount", with: "-100.0"
       end
 
       it "does not create a new expense" do
