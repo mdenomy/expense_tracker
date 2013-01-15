@@ -6,7 +6,7 @@ Expense Tracker is an application I developed to demonstrate Test Driven Develop
 
 The application is developed in an iterative and incremental manner.  The GIT repository contains a series of branches that show different stages of the development process.  Branches exist that show each of the phases of the Red-Green-Refactor cycle over the course of development.
 
-** NOTE: I am not advocating commiting changes with failing tests as part of your normal development practices.  I did it for this repository to be able to switch to different parts of the Red-Green-Refactor cycle quickly in the course of a presentation **
+**NOTE: I am not advocating commiting changes with failing tests as part of your normal development practices.  I did it for this repository to be able to switch to different parts of the Red-Green-Refactor cycle quickly in the course of a presentation**
 
 To get the code for a particular branch or tag, run the following command
 
