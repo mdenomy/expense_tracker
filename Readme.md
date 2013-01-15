@@ -49,3 +49,51 @@ Added some seed data and absolutely minimal styling to keep it simple.
   * 2-7-refactor-view
   * 2-8-seed-data-and-min-styling
 
+##Iteration 3
+Add a new expense.
+
+This iteration also brings us our first integration test using Capybara
+
+###Branches
+  * 3-1-failing-new-action
+  * 3-2-passing-new-action
+  * 3-3-failing-new-view
+  * 3-4-passing-new-view
+  * 3-5-first-integration-test
+  * 3-6-add-new-expense
+  
+Note that in branch 3-6 I added a series of tags that show the step by step progression.  You can check out a tag just like a branch with 
+
+'git checkout <tag>'
+e.g. 'git checkout 3-6-3'
+
+###Tags
+3-6-1 to 3-6-10
+
+##Iteration 4
+TDD doesn't mean you will never have a bug, but the first step in fixing a bug is to write a test that exposes the bug.
+
+In this iteration we will fix a few bugs
+  * The new form uses a number type that prevents us from entering decimal places
+  * The index page does not properly format the currency, if a whole number is entered for the amount, e.g. 12, it is dislayed as 12.0
+  
+When we change the new form to use a string, we will need to handle the case where the user enters commas and dollar signs
+
+###Branches
+  * 3-1-failing-new-action
+  * 3-2-passing-new-action
+  * 3-3-failing-new-view
+  * 3-4-passing-new-view
+  * 3-5-first-integration-test
+  * 3-6-add-new-expense
+  
+Note that in branch 3-6 I added a series of tags that show the step by step progression.  You can check out a tag just like a branch with 
+
+'git checkout <tag>'
+e.g. 'git checkout 3-6-3'
+
+###Tags
+3-6-1 to 3-6-10
+
+
+
