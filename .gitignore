@@ -17,3 +17,5 @@ log
 
 # Ignore RubyMine files
 .idea
+
+.DS_Store
