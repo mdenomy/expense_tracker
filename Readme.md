@@ -108,9 +108,9 @@ When we change the new form to use a string, we will need to handle the case whe
 This iteration also brings in our first helper, along with tests for the helper.
 
 ###Branches
-  4-1-cost-as-string
-  4-2-enter-cost-as-string
-  4-3-format-currency
+  * 4-1-cost-as-string
+  * 4-2-enter-cost-as-string
+  * 4-3-format-currency
   
 Note that in this iteration I added a series of tags that show the step by step progression.  You can check out a tag just like a branch with 
 
